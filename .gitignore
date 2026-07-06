@@ -1,0 +1,5 @@
+data/connections.csv
+data/resume.md
+runs/logs/
+.DS_Store
+.env
