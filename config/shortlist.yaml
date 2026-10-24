@@ -1,0 +1,19 @@
+# Shortlist — these companies are screened EVERY run, regardless of triggers.
+# For each: check for funding/product news and look for contacts with a shared background.
+
+companies:
+  # --- Frontier labs / large AI ---
+  - name: Anthropic
+    notes: ""
+  - name: OpenAI
+    notes: ""
+
+  # --- AI startups (examples — replace with your real list) ---
+  - name: Keyframe Labs
+    notes: "YC-backed AI avatars; did technical diligence June 2026"
+
+  # --- Robotics ---
+  # - name: Figure
+  # - name: Physical Intelligence
+
+# Tip: keep this to 20–40 companies.

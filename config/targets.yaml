@@ -1,0 +1,33 @@
+# Target criteria — edit freely; CLAUDE.md references this file
+company_types:
+  - ai_startup            # Series A through pre-IPO
+  - robotics_startup
+  - large_ai_company      # incl. frontier labs (OpenAI, Anthropic, GDM, xAI, Mistral, etc.)
+
+stage:
+  min: series_a
+  max: pre_ipo            # frontier labs / large AI cos exempt from stage filter
+
+triggers:
+  funding:
+    min_round_usd: 50000000
+    lookback_days: 90
+  shortlist: always       # config/shortlist.yaml screened every run
+
+geos:
+  - sf_bay_area
+  - nyc
+remote_ok: true           # only if HQ is SF or NYC
+
+scoring:
+  min_score_to_map_contacts: 50
+  min_score_for_cold_outreach: 80
+  max_drafts_per_run: 8
+
+sources:
+  funding_news:
+    - web_search          # "AI startup raises Series B" etc., TechCrunch, Axios Pro Rata
+  contact_discovery:
+    - connections_csv      # data/connections.csv — 1st-degree matches
+    - web_search            # targeted, single-person lookups for CEO / alumni bios — no bulk scraping
+    - apollo_api             # verified email lookup (People Match) — requires APOLLO_API_KEY in .env, see .env.example
